@@ -4,7 +4,6 @@ const port = 5000
 const cors = require('cors');
 const corsOptions = {
     origin: function (origin, callback) {
-        console.log(origin)
         callback(null, true)
     }
 };
