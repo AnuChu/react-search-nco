@@ -11,7 +11,6 @@ export default function Main() {
     const SearchOrg = async (e) => {
         e.preventDefault()
         const orgn = e.target.orgn.value
-        console.log(orgn)
         const response = await fetch('http://localhost:5000/api/get?orgn=' + orgn);
         const body = await response.json();
         if (response.status !== 200) throw Error(body.message);
